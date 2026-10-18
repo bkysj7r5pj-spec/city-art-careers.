@@ -1,37 +1,475 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="sq">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#172019"><title>City Art Careers</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="theme-color" content="#101510">
+
+<title>City Art Careers</title>
+
 <style>
-:root{--bg:#101510;--panel:#1c241c;--olive:#a6ad76;--cream:#f3efdf;--muted:#c2c6b8;--line:#3a4438}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button{font:inherit;cursor:pointer}header{position:sticky;top:0;z-index:3;background:#101510ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:16px 20px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;letter-spacing:1px;font-weight:500}.logo small{display:block;color:var(--olive);font-size:10px;letter-spacing:4px;margin-top:2px}.menu{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:50%;width:42px;height:42px;font-size:21px}.wrap{max-width:760px;margin:auto;padding:0 18px 48px}.hero{padding:45px 5px 32px}.eyebrow{color:var(--olive);letter-spacing:4px;font-size:11px}.hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(42px,10vw,68px);line-height:.98;margin:16px 0}.hero p{color:var(--muted);line-height:1.6;max-width:440px}.pill{display:inline-flex;align-items:center;gap:10px;border:0;background:var(--olive);color:#101510;border-radius:4px;padding:15px 18px;font-weight:700;margin-top:12px}.section-title{font-family:Georgia,serif;font-size:30px;font-weight:400;margin:28px 0 15px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card{min-height:155px;text-align:left;padding:18px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(145deg,#293328,#171d17);color:var(--cream);display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;transition:transform .12s,border-color .12s}.card:active{transform:scale(.98)}.card:focus-visible,button:focus-visible{outline:3px solid var(--olive);outline-offset:3px}.card .emoji{font-size:26px}.card strong{font-size:17px;letter-spacing:1px}.card span:last-child{color:var(--muted);font-size:12px;line-height:1.4}.arrow{align-self:flex-end;color:var(--olive);font-size:22px}.note{margin-top:22px;padding:18px;border:1px solid var(--line);border-radius:8px;color:var(--muted);line-height:1.6}.view{display:none;padding-top:24px}.back{border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:4px;padding:11px 14px;margin-bottom:22px}.view h1{font-family:Georgia,serif;font-weight:400;font-size:42px;margin:8px 0}.view .sub{color:var(--muted);line-height:1.5}.joblist{display:grid;gap:10px;margin-top:22px}.job{width:100%;display:flex;align-items:center;gap:12px;text-align:left;padding:16px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--cream)}.job .jobicon{font-size:22px}.job .jobname{font-weight:600}.job small{display:block;color:var(--muted);margin-top:5px}.job .arrow{margin-left:auto}.apply{display:block;text-align:center;text-decoration:none;background:var(--olive);color:#11170f;font-weight:700;padding:16px;border-radius:4px;margin-top:22px}.footer{border-top:1px solid var(--line);margin-top:38px;padding-top:18px;color:var(--muted);font-size:12px;letter-spacing:2px;text-align:center}@media(max-width:420px){.cards{grid-template-columns:1fr}.card{min-height:130px}.hero{padding-top:34px}.card .emoji{font-size:24px}}
+
+:root{--bg:#101510;--panel:#1c241c;--olive:#b5bd91;--text:#f5f5ef;--muted:#c0c5b9;--line:#414a3c}
+
+*{box-sizing:border-box}
+
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif;line-height:1.5}
+
+header{padding:22px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+
+.logo{font-size:28px;font-weight:800;letter-spacing:-1px}
+
+.logo small{display:block;font-size:10px;letter-spacing:4px;color:var(--olive)}
+
+.pill{border:1px solid var(--line);border-radius:30px;padding:8px 12px;font-size:11px}
+
+main{max-width:850px;margin:auto;padding:24px 16px 50px}
+
+.eyebrow{font-size:12px;letter-spacing:3px;color:var(--olive)}
+
+h1{font-size:clamp(35px,8vw,58px);line-height:1.05;letter-spacing:-2px}
+
+.intro{color:var(--muted);max-width:650px}
+
+.notice{border:1px solid #65704d;background:#1c2519;border-radius:14px;padding:15px;margin:22px 0}
+
+.notice strong{color:var(--olive)}
+
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px;text-align:left;color:var(--text);min-height:145px;cursor:pointer}
+
+.card strong{display:block;font-size:21px;margin:10px 0}
+
+.card span{font-size:12px;color:var(--olive)}
+
+.card p{color:var(--muted);font-size:13px;margin-bottom:0}
+
+.view{display:none}.view.active{display:block}
+
+.back{background:transparent;border:1px solid var(--line);color:white;border-radius:30px;padding:10px 15px;margin:10px 0 20px}
+
+.job{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px;margin:10px 0;display:flex;justify-content:space-between;align-items:center;gap:10px}
+
+.job h3{margin:0;font-size:17px}.job p{margin:4px 0 0;color:var(--muted);font-size:12px}
+
+button{font:inherit;cursor:pointer}
+
+.apply,.send{background:var(--olive);color:#151910;border:0;border-radius:30px;padding:11px 15px;font-weight:bold}
+
+footer{border-top:1px solid var(--line);margin-top:35px;padding-top:18px;color:var(--muted);font-size:12px}
+
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:10;overflow:auto;padding:14px}
+
+.modal.open{display:block}
+
+.dialog{max-width:620px;margin:0 auto;background:#171e17;border:1px solid var(--line);border-radius:18px;padding:20px}
+
+.dialog h2{margin-top:0}
+
+form{display:grid;gap:13px}
+
+label{display:grid;gap:6px;font-size:13px}
+
+input,select,textarea{width:100%;padding:12px;background:#0e130e;color:white;border:1px solid #4a5546;border-radius:9px;font:inherit}
+
+textarea{min-height:75px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.days{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+
+.day{display:flex;align-items:center;gap:8px;background:#101610;border:1px solid var(--line);border-radius:8px;padding:9px}
+
+.day input{width:auto}
+
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+
+.cancel{background:transparent;border:1px solid var(--line);color:white;border-radius:30px;padding:11px 15px}
+
+.small{font-size:11px;color:var(--muted)}
+
+@media(max-width:480px){.cards{grid-template-columns:1fr 1fr}.card{padding:13px}.card strong{font-size:18px}.job{align-items:flex-start;flex-direction:column}.two{grid-template-columns:1fr}}
+
 </style>
+
 </head>
+
 <body>
-<header><div class="logo">cityart<small>CAREERS</small></div><button class="menu" aria-label="Menu" onclick="showHome()">☰</button></header>
-<main class="wrap">
+
+<header>
+
+<div class="logo">cityart<small>CAREERS</small></div>
+
+<div class="pill">JOIN OUR TEAM</div>
+
+</header>
+
+<main>
+
 <section id="home">
-<div class="hero"><div class="eyebrow">JOIN OUR TEAM</div><h1>Build your<br>future with us.</h1><p>Bashkohu me ekipin e City Art. Një ambient unik, njerëz pozitivë dhe mundësi për të rritur karrierën tënde.</p><button class="pill" onclick="document.getElementById('departments').scrollIntoView({behavior:'smooth'})">SHIKO VENDET VAKANTE <span>→</span></button></div>
-<h2 class="section-title" id="departments">Zgjidh departamentin</h2>
+
+<div class="eyebrow">CITY ART · PEOPLE · FOOD · DRINKS</div>
+
+<h1>Ndërto karrierën<br>tënde me ne.</h1>
+
+<p class="intro">Bëhu pjesë e ekipit City Art. Zgjidh departamentin dhe apliko për pozicionin tënd.</p>
+
+<div class="notice">
+
+<strong>Kriter i detyrueshëm për të gjitha pozicionet</strong>
+
+<p>Kërkohet mbi 2 vite eksperiencë pune në sektorin bar–restaurant, në pozicionin përkatës ose në një pozicion të ngjashëm. Aplikimet pa eksperiencën e kërkuar nuk do të merren në konsideratë.</p>
+
+</div>
+
+<h2>Zgjidh departamentin</h2>
+
 <div class="cards">
-<button class="card" type="button" onclick="openDepartment('kitchen')"><span class="emoji">♨️</span><strong>KITCHEN</strong><span>Kuzhinë, sushi dhe përgatitje ushqimi</span><span class="arrow">↗</span></button>
-<button class="card" type="button" onclick="openDepartment('bar')"><span class="emoji">🍸</span><strong>BAR</strong><span>Bartender, barback dhe barista</span><span class="arrow">↗</span></button>
-<button class="card" type="button" onclick="openDepartment('service')"><span class="emoji">♧</span><strong>SERVICE</strong><span>Kamarier, host dhe runner</span><span class="arrow">↗</span></button>
-<button class="card" type="button" onclick="openDepartment('management')"><span class="emoji">✦</span><strong>MANAGEMENT</strong><span>Menaxherë dhe përgjegjës turni</span><span class="arrow">↗</span></button>
-</div><div class="note">Kandidatët me eksperiencë kanë përparësi. Pranojmë edhe fillestarë për pozicionet e përshtatshme.</div>
+
+<button class="card" onclick="openDepartment('kitchen')"><span>01 / FOOD</span><strong>KITCHEN</strong><p>Kuzhinë, sushi dhe përgatitje ushqimi.</p></button>
+
+<button class="card" onclick="openDepartment('bar')"><span>02 / DRINKS</span><strong>BAR</strong><p>Bartender, barista dhe shërbim pijesh.</p></button>
+
+<button class="card" onclick="openDepartment('service')"><span>03 / GUESTS</span><strong>SERVICE</strong><p>Kamarierë, host dhe mikpritje.</p></button>
+
+<button class="card" onclick="openDepartment('management')"><span>04 / TEAM</span><strong>MANAGEMENT</strong><p>Drejtim dhe organizim ekipi.</p></button>
+
+</div>
+
 </section>
-<section id="department" class="view"><button class="back" onclick="showHome()">← Kthehu te departamentet</button><div class="eyebrow" id="deptEyebrow">CITY ART CAREERS</div><h1 id="deptTitle">KITCHEN</h1><p class="sub" id="deptSub"></p><h2 class="section-title">Vendet vakante</h2><div class="joblist" id="joblist"></div><a class="apply" id="generalApply" href="https://wa.me/355694018899?text=P%C3%ABrsh%C3%ABndetje%20City%20Art!%20D%C3%ABshiroj%20t%C3%AB%20aplikoj%20p%C3%ABr%20pun%C3%AB." target="_blank" rel="noopener">APLIKO NË WHATSAPP ↗</a></section>
-<div class="footer">CITY ART · PEOPLE · FOOD · DRINKS · GOOD TIMES</div>
+
+<section id="department" class="view">
+
+<button class="back" onclick="showHome()">← Kthehu te departamentet</button>
+
+<div class="eyebrow">CITY ART CAREERS</div>
+
+<h1 id="deptTitle"></h1>
+
+<p class="intro" id="deptSub"></p>
+
+<div class="notice"><strong>Kriteri i eksperiencës</strong><p>Mbi 2 vite eksperiencë në sektorin bar–restaurant janë të detyrueshme.</p></div>
+
+<h2>Pozicionet e punës</h2>
+
+<div id="jobs"></div>
+
+</section>
+
+<footer>CITY ART · PEOPLE · FOOD · DRINKS</footer>
+
 </main>
+
+<div class="modal" id="applicationModal">
+
+<div class="dialog">
+
+<h2>Apliko te City Art</h2>
+
+<p class="small">Plotëso të dhënat dhe zgjidh orarin kur mund të vish për intervistë.</p>
+
+<form id="applicationForm">
+
+<div class="two">
+
+<label>Emër dhe mbiemër *
+
+<input name="name" required autocomplete="name"></label>
+
+<label>Telefon / WhatsApp *
+
+<input name="phone" type="tel" required autocomplete="tel"></label>
+
+</div>
+
+<label>Pozicioni *
+
+<input name="job" id="jobField" required readonly></label>
+
+<label>Departamenti
+
+<input name="department" id="deptField" readonly></label>
+
+<label>Eksperienca në sektorin bar–restaurant *
+
+<select name="experience" id="experience" required>
+
+<option value="">Zgjidh eksperiencën</option>
+
+<option value="0–2 vite">0–2 vite</option>
+
+<option value="2–3 vite">2–3 vite</option>
+
+<option value="3–5 vite">3–5 vite</option>
+
+<option value="Mbi 5 vite">Mbi 5 vite</option>
+
+</select></label>
+
+<label>Pozicioni i mëparshëm / eksperienca
+
+<textarea name="details" placeholder="Përshkruaj eksperiencën tënde"></textarea></label>
+
+<label>Ku ke punuar më parë?
+
+<textarea name="previous" placeholder="Emri i lokalit ose restorantit"></textarea></label>
+
+<h3>Disponueshmëria për intervistë</h3>
+
+<div class="two">
+
+<label>Data e preferuar *
+
+<input type="date" name="interviewDate" required></label>
+
+<label>Orari i preferuar *
+
+<select name="interviewTime" required>
+
+<option value="">Zgjidh orarin</option>
+
+<option>09:00–12:00</option>
+
+<option>12:00–15:00</option>
+
+<option>15:00–18:00</option>
+
+<option>18:00–20:00</option>
+
+</select></label>
+
+</div>
+
+<div class="two">
+
+<label>Datë alternative
+
+<input type="date" name="alternateDate"></label>
+
+<label>Orar alternativ
+
+<select name="alternateTime">
+
+<option value="">Pa preferencë</option>
+
+<option>09:00–12:00</option>
+
+<option>12:00–15:00</option>
+
+<option>15:00–18:00</option>
+
+<option>18:00–20:00</option>
+
+</select></label>
+
+</div>
+
+<label>Ditët kur je i/e disponueshëm/me</label>
+
+<div class="days">
+
+<label class="day"><input type="checkbox" name="days" value="E hënë">E hënë</label>
+
+<label class="day"><input type="checkbox" name="days" value="E martë">E martë</label>
+
+<label class="day"><input type="checkbox" name="days" value="E mërkurë">E mërkurë</label>
+
+<label class="day"><input type="checkbox" name="days" value="E enjte">E enjte</label>
+
+<label class="day"><input type="checkbox" name="days" value="E premte">E premte</label>
+
+<label class="day"><input type="checkbox" name="days" value="E shtunë">E shtunë</label>
+
+<label class="day"><input type="checkbox" name="days" value="E diel">E diel</label>
+
+</div>
+
+<label>A mund të përshtatesh me një orar tjetër? *
+
+<select name="flexible" required>
+
+<option value="">Zgjidh</option>
+
+<option>Po, jam fleksibël</option>
+
+<option>Jo, preferoj orarin e zgjedhur</option>
+
+</select></label>
+
+<label>Shënime shtesë
+
+<textarea name="notes" placeholder="Informacion tjetër (opsionale)"></textarea></label>
+
+<p class="small">Aplikimi hap WhatsApp me mesazhin e përgatitur. Kontrolloje dhe dërgoje vetë.</p>
+
+<div class="actions">
+
+<button class="send" type="submit">Dërgo aplikimin në WhatsApp</button>
+
+<button class="cancel" type="button" onclick="closeForm()">Mbyll</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
 <script>
+
 const departments={
- kitchen:{title:'KITCHEN',sub:'Pasion për ushqimin. Cilësi në çdo detaj.',jobs:['Kuzhinier/e','Ndihmës kuzhinier/e','Sushi Chef','Pizzaiolo','Pasticier/e','Enëlarës / Ndihmës']},
- bar:{title:'BAR',sub:'Kreativitet në çdo gotë.',jobs:['Bartender','Barback','Barista','Supervisor Bar']},
- service:{title:'SERVICE',sub:'Mikpritje e ngrohtë dhe eksperiencë e shkëlqyer për çdo klient.',jobs:['Kamarier/e','Runner','Host / Hostess','Përgjegjës salle']},
- management:{title:'MANAGEMENT',sub:'Ndihmo në drejtimin e ekipit dhe krijimin e eksperiencave të veçanta.',jobs:['Restaurant Manager','Assistant Manager','Përgjegjës turni']}
+
+kitchen:{title:'KITCHEN',sub:'Pasion për ushqimin dhe cilësinë.',jobs:['Head Chef','Sushi Chef','Chef de Partie','Kuzhinier','Ndihmës kuzhinier','Dishwasher']},
+
+bar:{title:'BAR',sub:'Kreativitet dhe mikpritje në çdo gotë.',jobs:['Bar Manager','Bartender','Barback','Barista']},
+
+service:{title:'SERVICE',sub:'Krijo përvoja të mira për klientët.',jobs:['Restaurant Manager','Head Waiter','Kamarier / Kamarierе','Host / Hostess','Runner']},
+
+management:{title:'MANAGEMENT',sub:'Drejtim dhe organizim i ekipit.',jobs:['General Manager','Assistant Manager','Shift Supervisor']}
+
 };
-function openDepartment(key){const d=departments[key];if(!d)return;document.getElementById('home').style.display='none';const v=document.getElementById('department');v.style.display='block';document.getElementById('deptTitle').textContent=d.title;document.getElementById('deptSub').textContent=d.sub;const list=document.getElementById('joblist');list.replaceChildren();d.jobs.forEach(job=>{const b=document.createElement('button');b.type='button';b.className='job';b.innerHTML='<span class="jobicon">↗</span><span class="jobname"></span><span class="arrow">→</span>';b.querySelector('.jobname').textContent=job; b.querySelector('.jobname').insertAdjacentHTML('beforeend','<small>Full Time / Part Time · Tiranë</small>');b.addEventListener('click',()=>applyFor(job,d.title));list.appendChild(b)});document.getElementById('generalApply').href='https://wa.me/355694018899?text='+encodeURIComponent('Përshëndetje City Art! Dëshiroj të aplikoj për punë. Departamenti: '+d.title+'. Pozicioni: ');window.scrollTo({top:0,behavior:'smooth'});}
-function applyFor(job,dept){const msg='Përshëndetje City Art! Dëshiroj të aplikoj për pozicionin: '+job+'. Departamenti: '+dept+'. Emër dhe mbiemër: ';window.open('https://wa.me/355694018899?text='+encodeURIComponent(msg),'_blank','noopener');}
-function showHome(){document.getElementById('department').style.display='none';document.getElementById('home').style.display='block';window.scrollTo({top:0,behavior:'smooth'});}
+
+let selectedDepartment='';
+
+function openDepartment(key){
+
+const d=departments[key];
+
+selectedDepartment=d.title;
+
+document.getElementById('home').style.display='none';
+
+document.getElementById('department').classList.add('active');
+
+document.getElementById('deptTitle').textContent=d.title;
+
+document.getElementById('deptSub').textContent=d.sub;
+
+const jobs=document.getElementById('jobs');
+
+jobs.replaceChildren();
+
+d.jobs.forEach(job=>{
+
+const row=document.createElement('div');row.className='job';
+
+const info=document.createElement('div');
+
+const h=document.createElement('h3');h.textContent=job;
+
+const p=document.createElement('p');p.textContent='Kërkohet mbi 2 vite eksperiencë';
+
+info.append(h,p);
+
+const b=document.createElement('button');b.className='apply';b.textContent='Apliko →';
+
+b.onclick=()=>openForm(job);
+
+row.append(info,b);jobs.append(row);
+
+});
+
+window.scrollTo(0,0);
+
+}
+
+function showHome(){
+
+document.getElementById('department').classList.remove('active');
+
+document.getElementById('home').style.display='block';
+
+window.scrollTo(0,0);
+
+}
+
+function openForm(job){
+
+document.getElementById('jobField').value=job;
+
+document.getElementById('deptField').value=selectedDepartment;
+
+document.getElementById('applicationModal').classList.add('open');
+
+document.body.style.overflow='hidden';
+
+}
+
+function closeForm(){
+
+document.getElementById('applicationModal').classList.remove('open');
+
+document.body.style.overflow='';
+
+}
+
+document.getElementById('applicationForm').addEventListener('submit',function(e){
+
+e.preventDefault();
+
+const f=new FormData(this);
+
+if(f.get('experience')==='0–2 vite'){
+
+alert('Për të aplikuar kërkohen mbi 2 vite eksperiencë në sektorin bar–restaurant.');
+
+return;
+
+}
+
+const msg=[
+
+'Përshëndetje City Art! Dëshiroj të aplikoj për punë.',
+
+'Emër: '+f.get('name'),
+
+'Telefon: '+f.get('phone'),
+
+'Pozicioni: '+f.get('job'),
+
+'Departamenti: '+f.get('department'),
+
+'Eksperienca: '+f.get('experience'),
+
+'Detaje eksperience: '+(f.get('details')||'Pa plotësuar'),
+
+'Punë e mëparshme: '+(f.get('previous')||'Pa plotësuar'),
+
+'Data e intervistës: '+f.get('interviewDate'),
+
+'Orari i intervistës: '+f.get('interviewTime'),
+
+'Datë alternative: '+(f.get('alternateDate')||'Pa plotësuar'),
+
+'Orar alternativ: '+(f.get('alternateTime')||'Pa preferencë'),
+
+'Ditët e disponueshme: '+(f.getAll('days').join(', ')||'Pa specifikuar'),
+
+'Fleksibiliteti: '+f.get('flexible'),
+
+'Shënime: '+(f.get('notes')||'Pa shënime')
+
+].join('\n');
+
+window.location.href='https://wa.me/355694018899?text='+encodeURIComponent(msg);
+
+});
+
+const today=new Date();
+
+const minDate=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+
+document.querySelectorAll('input[type="date"]').forEach(el=>el.min=minDate);
+
 </script>
-</body></html>
+
+</body>
+
+</html>
